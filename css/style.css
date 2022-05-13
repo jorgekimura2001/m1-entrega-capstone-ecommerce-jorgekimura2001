@@ -1,0 +1,29 @@
+.container-nav{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+}
+.logo section{
+    margin: 23px 118px
+}
+.container-nav ul{
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+}
+.container-nav li{
+    padding: 10px;
+}
+
+.container-itens{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+aside{
+    display: flex;
+    align-items: flex-end;
+    
+    flex-direction: column;
+}
