@@ -1,29 +1,70 @@
+* {
+    box-sizing: border-box;
+}
+body, nav, h1, div{
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+}
+a{
+    text-decoration: none;
+    color: #292929;
+}
+
 .container-nav{
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
+    align-items: center;
+   
+    height: 70px;
+    margin-bottom: 52px;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 30px -10px rgba(0, 0, 0, 0.25);
 }
-.logo section{
-    margin: 23px 118px
+.logo {
+    color: #292929;
+    height: 24px;
+    margin: 23px 118px;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 24px;
 }
+
 .container-nav ul{
+    margin-right: 117px;
     display: flex;
     flex-direction: row;
     list-style-type: none;
 }
+
 .container-nav li{
     padding: 10px;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 16px;
 }
 
 .container-itens{
     display: flex;
     align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
+    flex-flow: wrap row;
 }
-aside{
+.cards{
+    width: 296px;
+    height: 254px;
+    margin: 52px 115px 22px 40px;
+    padding: 10px;
+}
+img{
+    width: 296px;
+    height: 154px;
+}
+main{
+    align-items: baseline;
     display: flex;
-    align-items: flex-end;
-    
-    flex-direction: column;
+    justify-content: center;
+
 }
