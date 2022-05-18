@@ -34,27 +34,25 @@ const divPai = document.querySelector('.container-itens')
 
 // Percorrer cada objeto
 // Atribuir a ele o valor 
-console.log(divPai)
-function adicionarProdutos(arrayProduto){
-    divPai.innerHTML = ""
-    for(let i = 0; i < arrayProduto.length; i++){
-        divPai.innerHTML += `<div class="cards">
-        <figure>
-          <img src=${arrayProduto.img} alt=${arrayProduto.nameItem} />
+
+// CRIANDO OS CARDS
+data.forEach(function (produto) { // Percorre o array de objetos 
+  const divCards = document.createElement('div') // cria uma div que é a cards 
+  divCards.classList.add('cards') // adição de classe 
+  // dai os filhos da div card eu posso fazer por innerHTML
+  divCards.innerHTML = `<figure>  
+  <img src=${produto.img} alt=${produto.nameItem} />
         </figure>
         <div class="description">
-          <p class="Small-Detail">${arrayProduto.tag}</p>
-          <h2 class="Title-3">${arrayProduto.nameItem}</h2>
-          <p class="Body">${arrayProduto.description}</p>
-          <p class="Body-Semi-Bold">R$ ${arrayProduto.value}</p>
+          <p class="Small-Detail">${produto.tag}</p>
+          <h2 class="Title-3">${produto.nameItem}</h2>
+          <p class="Body">${produto.description}</p>
+          <p class="Body-Semi-Bold">R$ ${produto.value}</p>
           <button class="btnAdd">Adicionar ao carrinho</button>
-        </div>
-        </div>`
-        
-    }
-    console.log(divPai)
-}
-adicionarProdutos(data)
-console.log(adicionarProdutos)
+        </div>`;
+  divPai.appendChild(divCards) // como o pai é a divPai só dei um appendChild nele 
+})
+
+
 
 
